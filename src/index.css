@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: 'Montserrat', sans-serif;
+
+    --color-primary: #1E4323;
+    --color-primary-hover: #2A5C31;
+    
+    --color-accent: #FF7A38;
+    --color-accent-hover: #E06324;
+    
+    --color-bg-main: #FFFFFF;
+    --color-bg-card: #F9FAFB;
+    
+    --color-text-title: #1F2937;
+    --color-text-muted: #4B5563;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-title);
+}
