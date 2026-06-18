@@ -17,7 +17,7 @@ export const Header = () => {
 						placeholder='Найти в Parhato...'
 						className='w-150 bg-white text-neutral-title placeholder-neutral-muted pl-5 pr-12 py-3 rounded-xl text-sm font-medium border border-gray-100 shadow-xs outline-hidden focus:border-primary focus:shadow-md transition-all duration-200'
 					/>
-					<button className='absolute right-4 text-accent hover:text-accent-hover transition-colors cursor-pointer'>
+					<button className='absolute right-4 text-accent hover:text-accent-hover hover:scale-105 transition-colors cursor-pointer'>
 						<Search />
 					</button>
 				</div>
