@@ -38,7 +38,7 @@ export const Stories = () => {
 	return (
 		<div>
 			<ul className='pt-8 cursor-grab'>
-				<ScrollContainer className='flex space-x-4 overflow-x-auto scrollbar-none pb-2'>
+				<ScrollContainer className='flex space-x-4 overflow-x-auto scrollbar-none'>
 					{loading
 						? skeleton
 						: stories.map(story => (

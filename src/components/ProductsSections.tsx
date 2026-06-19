@@ -34,13 +34,13 @@ export const ProductsSections = ({ currentCategory }: ProductCardProps) => {
 	}
 
 	return (
-		<section>
+		<section className='mb-10'>
 			<h2 className='text-text-title text-2xl font-bold mb-4 flex items-center gap-2'>
 				<span>{currentCategory.emoji}</span>
 				<span>{currentCategory.name}</span>
 			</h2>
 
-			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-10'>
+			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
 				{products.map(product => (
 					<ProductCard key={product.id} product={product} />
 				))}

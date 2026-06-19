@@ -7,7 +7,9 @@ import type { Category } from '../types/Categories';
 export const useCategories = () => {
     const [categories, setCategories] = useState<Category[]>([]);
 	const [loading, setLoading] = useState(false);
-	const [activeCategory, setActiveCategory] = useState('');
+	const [activeCategory, setActiveCategory] = useState<string>(
+		'36064bb2-0622-4544-937a-3eaeca899ef2',
+	);
 
 	useEffect(() => {
 		const fetchCategories = async () => {
@@ -15,12 +17,19 @@ export const useCategories = () => {
 				setLoading(true);
 				const { data } = await supabase
 					.from('Categories')
-					.select('*')
+					.select('*, Products(category)')
 					.order('id', { ascending: true });
 
 				if (data && data.length > 0) {
-					setCategories(data);
-					setActiveCategory(data[0].id ?? '');
+					const activeCategories = data.filter(
+						category => category.Products && category.Products.length > 0,
+					);
+
+					if (activeCategories.length > 0) {
+						setCategories(activeCategories);
+
+						setActiveCategory(activeCategories[0].id ?? '');
+					}
 				}
 			} catch (error) {
 				console.log('Error:', error);
