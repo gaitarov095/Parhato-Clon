@@ -32,5 +32,6 @@ export const useCategories = () => {
 		fetchCategories();
 	}, []);
 
+
 	return { categories, loading, activeCategory, setActiveCategory };
 }

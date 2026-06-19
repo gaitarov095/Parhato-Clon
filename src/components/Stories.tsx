@@ -44,7 +44,7 @@ export const Stories = () => {
 						: stories.map(story => (
 								<li
 									key={story.id}
-									className='flex-none w-40 h-48 bg-gray-100 rounded-2xl relative overflow-hidden cursor-pointer shadow-xs hover:shadow-md transition-all duration-200 group'
+									className='flex-none w-45 h-53 bg-gray-100 rounded-2xl relative overflow-hidden cursor-pointer shadow-xs hover:shadow-md transition-all duration-200 group'
 								>
 									<img
 										src={story.image}
