@@ -5,13 +5,14 @@ import { ProductsGrid } from './components/ProductsGrid';
 // import { ProductsPromotion } from './components/ProductsPromotion';
 
 export const App = () => {
+	
 	return (
 		<div>
 			<Header />
 			<main className='px-8'>
 				<Stories />
-				<Categories />
-				<ProductsGrid />
+					<Categories />
+					<ProductsGrid />
 			</main>
 		</div>
 	);

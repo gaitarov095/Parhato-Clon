@@ -17,7 +17,10 @@ export const Stories = () => {
 		const fetchStories = async () => {
 			setLoading(true);
 			try {
-				const { data } = await supabase.from<'Stories', Story>('Stories').select('*');
+				const { data } = await supabase
+					.from<'Stories', Story>('Stories')
+					.select('*')
+					.order('id', { ascending: true });
 
 				if (data && data.length > 0) {
 					setStories(data);
@@ -28,9 +31,9 @@ export const Stories = () => {
 			} finally {
 				setLoading(false);
 			}
-		}
+		};
 		fetchStories();
-	}, [])
+	}, []);
 
 	return (
 		<div>
