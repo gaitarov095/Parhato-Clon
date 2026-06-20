@@ -7,7 +7,7 @@ export const ProductsGridSkeleton = () => {
 				))}
 			</div>
 			<div className='w-60 h-10 bg-gray-200 rounded-2xl animate-pulse mb-5' />
-			<div className='flex items-center gap-7'>
+			<div className='flex items-center gap-7 mb-8'>
 				{[...Array(4)].map((_, i) => (
 					<div
 						key={i}

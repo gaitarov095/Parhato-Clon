@@ -40,7 +40,7 @@ export const ProductsSections = ({ currentCategory }: ProductCardProps) => {
 				<span>{currentCategory.name}</span>
 			</h2>
 
-			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+			<div className='flex items-center flex-wrap gap-8'>
 				{products.map(product => (
 					<ProductCard key={product.id} product={product} />
 				))}
