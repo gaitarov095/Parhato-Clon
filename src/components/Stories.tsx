@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
+import ScrollContainer from 'react-indiana-drag-scroll';
 
 import { supabase } from '../supabaseClient'
 
-import ScrollContainer from 'react-indiana-drag-scroll';
 import { StoriesSkeleton } from '../Skeletons/StoriesSkeleton';
 
 import type { Story } from '../types/Story';

@@ -13,8 +13,12 @@ const footerLinks = {
 	],
 };
 
+
 export const Footer = () => {
-	const { categories } = useCategories()
+	const { categories } = useCategories()	
+	
+	const currentYear = new Date().getFullYear()
+
 	return (
 		<footer className='bg-primary text-white mt-16'>
 			<div className='px-8 py-12'>
@@ -112,7 +116,7 @@ export const Footer = () => {
 			<div className='border-t border-white/10'>
 				<div className='px-8 py-5 flex items-center justify-between'>
 					<p className='text-white/50 text-xs'>
-						&copy; 2024 Parhato. Все права защищены.
+						&copy; {currentYear} Parhato. Все права защищены.
 					</p>
 					<div className='flex gap-6'>
 						<a
